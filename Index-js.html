@@ -1,0 +1,54 @@
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.1/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.0.0/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.0.0/js/buttons.bootstrap4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.0.0/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.0.0/js/buttons.print.min.js"></script>
+
+<script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap4.min.js"></script>
+
+
+
+
+
+<script>
+  google.script.run.withSuccessHandler(showData).getData();
+  function showData(dataArray){
+    $(document).ready(function(){
+      $('#data-table').DataTable({
+        data: dataArray,
+        columns: [
+          {"title":"column_head1"},
+          {"title":"column_head2"},
+          {"title":"column_head3"},
+          {"title":"column_head4"},
+          {"title":"column_head5"},
+          {"title":"column_head6"},  //number of columns depending on your data
+       
+        ],
+        buttons: [ 'excel', 'pdf' ],
+        dom:
+        "<'row'<'col-sm-12 col-md-4 mb-3'B>>" +
+        "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+        "<'row'<'col-sm-12'tr>>" +
+        "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>"
+
+      });
+    
+    
+    
+    
+    });
+  }
+
+
+</script>
+<script scr="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script scr="https://cdn.datatables.net/1.11.0/js/jquery.dataTables.min.js"></script>
+<script scr="//cdn.datatables.net/datetime/1.1.1/js/dataTables.dateTime.min.js"></script>
+<script scr="https://editor.datatables.net/extensions/Editor/js/dataTables.editor.min.js"></script>
